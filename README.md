@@ -1,4 +1,4 @@
-Pretty self-explanatory program. It tracks the amount of subscribers and 'users here now' on a given subreddit at a given interval.
+Modified version of the main tracker. This one only tracks 'users here now' and thus doesn't require praw or any other outside plugins.
 
 Output looks like this:
 
