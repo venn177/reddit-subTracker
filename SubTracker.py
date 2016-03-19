@@ -22,7 +22,7 @@ def get_active_users():
 
 def main():
     currentTime = '[' + str(datetime.now().strftime("%H:%M:%S")) + '] '
-    print(str(currentTime) + 'Logging in...')
+    print(str(currentTime) + 'Initializing')
     r = praw.Reddit(user_agent = 'SubTracker v0.1')
     subToWatch = r.get_subreddit(SUBREDDIT_NAME)
     try:
