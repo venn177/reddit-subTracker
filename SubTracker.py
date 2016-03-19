@@ -1,4 +1,3 @@
-import praw
 import requests
 import sys
 import time
@@ -23,18 +22,14 @@ def get_active_users():
 def main():
     currentTime = '[' + str(datetime.now().strftime("%H:%M:%S")) + '] '
     print(str(currentTime) + 'Initializing')
-    r = praw.Reddit(user_agent = 'SubTracker v0.1')
-    subToWatch = r.get_subreddit(SUBREDDIT_NAME)
     try:
-        subLogFile = open(currentDirectory + 'subLogFile.txt', 'a')
         currentLogFile = open(currentDirectory + 'currentLogFile.txt', 'a')
     except:
         pass
     while True:
         currentTime = '[' + str(datetime.now().strftime("%H:%M:%S")) + '] '
         activeUsers = get_active_users()
-        print(str(currentTime) + 'Subscribers: ' + str(subToWatch.subscribers) + ' | Active Users: ' + str(activeUsers))
-        subLogFile.write(str(currentTime) + str(subToWatch.subscribers) + '\n')
+        print(str(currentTime) + 'Active Users: ' + str(activeUsers))
         currentLogFile.write(str(currentTime) + str(activeUsers) + '\n')
         time.sleep(WAIT_TIME * 60)
 
