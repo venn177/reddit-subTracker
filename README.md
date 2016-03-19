@@ -11,7 +11,9 @@ Pretty self-explanatory program. It tracks the amount of subscribers and 'users 
 ##Installation
 
 First you install praw using 
+
     pip install praw
+
 After that, you just put subTracker.py somewhere on your computer and run it.
 
 ##Output
